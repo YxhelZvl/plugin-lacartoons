@@ -1,7 +1,7 @@
 {
   "id": "lacartoons-source",
   "name": "LACartoons",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "apiVersion": 4,
   "entry": "plugin.js",
   "description": "Series animadas de LACartoons con episodios y reproducción desde sus videos públicos.",
@@ -27,6 +27,6 @@
     "download"
   ],
   "secrets": {
-    "cubeKey": "kino-sealed:v1:dJK6ySwmMn8rODr8t5SSg-KpuW9c_BS1x12XzMrQqWFBpnTIYVuu9LdfyFGjxyvL0Hk2CXEYEeb0ti5NUN6DXX9ng87xZ_b8mvQ7vA"
+    "cubeKey": "kino-sealed:v1:LhDzfxV5mmIeE-v9Xea_ZIyuq09EBw2Fr_8HVxrBWjYAQGKXBW1o_Yi43Kzk4lb-pM6GUjSnhuNgdCp6f2Iwei-2WVc-hWUJIPcP"
   }
 }
