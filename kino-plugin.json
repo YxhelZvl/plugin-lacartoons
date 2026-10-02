@@ -1,16 +1,23 @@
 {
-  "id": "archive-org",
-  "name": "Internet Archive",
-  "version": "1.4.2",
-  "apiVersion": 3,
+  "id": "lacartoons-source",
+  "name": "LACartoons",
+  "version": "1.0.5",
+  "apiVersion": 4,
   "entry": "plugin.js",
-  "description": "Películas de dominio público y televisión clásica de archive.org",
-  "author": "kinotvapp",
-  "homepage": "https://github.com/kinotvapp/kino-plugin-archive",
+  "description": "Series animadas de LACartoons con episodios y reproducción desde sus videos públicos.",
+  "author": "YxhelZvl",
+  "icon": "icon.png",
+  "homepage": "https://www.lacartoons.com/",
   "hosts": [
-    "archive.org",
-    "*.archive.org"
-  ],
+  "*.lacartoons.com",
+  "*.ok.ru",
+  "ok.ru",
+  "*.okcdn.ru",
+  "*.mycdn.me",
+  "*.rpmvid.com",
+  "*.tiktokcdn.com"
+],
+  "streamHosts": "any",
   "capabilities": [
     "search",
     "home",
@@ -19,80 +26,7 @@
     "resolve",
     "download"
   ],
-  "color": "#E0A030",
-  "icon": "icon.png",
-  "settings": [
-    {
-      "key": "url1",
-      "label": "Dirección 1",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat1",
-      "label": "Categoría 1",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    },
-    {
-      "key": "url2",
-      "label": "Dirección 2",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat2",
-      "label": "Categoría 2",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    },
-    {
-      "key": "url3",
-      "label": "Dirección 3",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat3",
-      "label": "Categoría 3",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    },
-    {
-      "key": "url4",
-      "label": "Dirección 4",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat4",
-      "label": "Categoría 4",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    },
-    {
-      "key": "url5",
-      "label": "Dirección 5",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat5",
-      "label": "Categoría 5",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    },
-    {
-      "key": "url6",
-      "label": "Dirección 6",
-      "type": "url",
-      "hint": "https://archive.org/details/… o una búsqueda"
-    },
-    {
-      "key": "cat6",
-      "label": "Categoría 6",
-      "type": "text",
-      "hint": "Opcional: nombre de la fila en el Home"
-    }
-  ]
+  "secrets": {
+    "cubeKey": "kino-sealed:v1:dJK6ySwmMn8rODr8t5SSg-KpuW9c_BS1x12XzMrQqWFBpnTIYVuu9LdfyFGjxyvL0Hk2CXEYEeb0ti5NUN6DXX9ng87xZ_b8mvQ7vA"
+  }
 }
