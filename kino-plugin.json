@@ -1,7 +1,7 @@
 {
   "id": "lacartoons-source",
   "name": "LACartoons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "apiVersion": 4,
   "entry": "plugin.js",
   "description": "Series animadas de LACartoons con episodios y reproducción desde sus videos públicos.",
@@ -9,14 +9,18 @@
   "icon": "icon.png",
   "homepage": "https://www.lacartoons.com/",
   "hosts": [
-  "*.lacartoons.com",
-  "*.ok.ru",
-  "ok.ru",
-  "*.okcdn.ru",
-  "*.mycdn.me",
-  "*.rpmvid.com",
-  "*.tiktokcdn.com"
-],
+    "*.lacartoons.com",
+    "*.ok.ru",
+    "ok.ru",
+    "*.okcdn.ru",
+    "*.mycdn.me",
+    "*.rpmvid.com",
+    "*.tiktokcdn.com",
+    "dhtpre.com",
+    "*.dhtpre.com",
+    "sendvid.com",
+    "*.sendvid.com"
+  ],
   "streamHosts": "any",
   "capabilities": [
     "search",

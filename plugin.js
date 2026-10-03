@@ -6,7 +6,6 @@
 const BASE = "https://www.lacartoons.com";
 const CUBE_BASE = "https://cubeembed.rpmvid.com";
 
-const PAGE_SIZE = 50;
 const HOME_SIZE = 20;
 
 // Categorías que home() carga, en paralelo: home() entero tiene 20 s en Kino.
@@ -150,6 +149,12 @@ function pageUrl(page) {
     : BASE + "/?page=" + page;
 }
 
+// The site shows 16 series per page and links the following page ("?page=N" or
+// "&amp;page=N"): there is a next page exactly when that link is there.
+function hasPage(html, page) {
+  return new RegExp("[?&;]page=" + page + "(?![0-9])").test(html);
+}
+
 function pageFromCursor(cursor) {
   const n = cursor ? Number(cursor) : 1;
 
@@ -249,7 +254,7 @@ export async function browse(ref, cursor) {
     return {
       items,
       next:
-        items.length >= PAGE_SIZE
+        items.length && hasPage(html, page + 1)
           ? String(page + 1)
           : undefined,
     };
@@ -278,7 +283,7 @@ export async function browse(ref, cursor) {
   return {
     items,
     next:
-      items.length >= PAGE_SIZE
+      items.length && hasPage(html, page + 1)
         ? String(page + 1)
         : undefined,
   };
@@ -1061,6 +1066,35 @@ async function resolveDhtpre(embedUrl) {
 
 
 /* =========================================================
+   SENDVID (MP4 directo en og:video)
+   ========================================================= */
+
+async function resolveSendvid(embedUrl) {
+  const html = await get(embedUrl);
+
+  const m =
+    /property="og:video:secure_url"\s+content="([^"]+)"/i.exec(html) ||
+    /property="og:video"\s+content="([^"]+)"/i.exec(html) ||
+    /<source[^>]+src="([^"]+)"/i.exec(html);
+
+  if (!m) {
+    throw kino.error(
+      "unavailable",
+      "Sendvid no entregó el video"
+    );
+  }
+
+  return {
+    url: absolute(decodeHtml(m[1])),
+    mime: "video/mp4",
+    headers: {
+      Referer: "https://sendvid.com/",
+    },
+  };
+}
+
+
+/* =========================================================
    RESOLVE
    ========================================================= */
 
@@ -1127,6 +1161,14 @@ export async function resolve(ref) {
     hostname.endsWith(".dhtpre.com")
   ) {
     return resolveDhtpre(embedUrl);
+  }
+
+  // Sendvid
+  if (
+    hostname === "sendvid.com" ||
+    hostname.endsWith(".sendvid.com")
+  ) {
+    return resolveSendvid(embedUrl);
   }
 
   throw kino.error(
