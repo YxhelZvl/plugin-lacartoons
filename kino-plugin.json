@@ -1,27 +1,32 @@
 {
-  "id": "harrypotter-yxhelzvl",
-  "name": "Harry Potter Saga",
-  "description": "Las 8 películas de la saga en alta calidad, listas para reproducir.",
-  "version": "1.0.6",
+  "id": "lacartoons-source",
+  "name": "LACartoons",
+  "version": "1.0.1",
   "apiVersion": 4,
   "entry": "plugin.js",
+  "description": "Series animadas de LACartoons con episodios y reproducción desde sus videos públicos.",
+  "author": "YxhelZvl",
   "icon": "icon.png",
+  "homepage": "https://www.lacartoons.com/",
   "hosts": [
-    "raw.githubusercontent.com",
-    "image.tmdb.org",
-    "yadi.sk",
-    "disk.yandex.ru",
-    "storage.yandex.net",
-    "*.storage.yandex.net",
-    "downloader.disk.yandex.ru"
-  ],
+  "*.lacartoons.com",
+  "*.ok.ru",
+  "ok.ru",
+  "*.okcdn.ru",
+  "*.mycdn.me",
+  "*.rpmvid.com",
+  "*.tiktokcdn.com"
+],
   "streamHosts": "any",
   "capabilities": [
     "search",
     "home",
-    "resolve"
+    "browse",
+    "episodes",
+    "resolve",
+    "download"
   ],
   "secrets": {
-    "hpKey": "kino-sealed:v1:n4L-8MJmIdQEljyuGbpKtTZfJ7NSR0yZT4SFK_rYtilmEYFR5DSn71TpQ1YcCYkKIqavGANIPovrpL-pd13ekw3rYbbUk7bwPwRU8Z4km9Yg74rccDfhuYWLFkcCxPWxRH45RhUV7s73Eefj5KlrDBvj_flditEaWIvbfw"
+    "cubeKey": "kino-sealed:v1:6urtAz0VNJhg--IO9I-DopbJL3FkGchO5BwDIInwWzi-0MuylJHNP9wKFgF-sRvRj7vpPWWH33m3bO-71Xe8zQNU_-Lvr0fgSAxTzw"
   }
 }
