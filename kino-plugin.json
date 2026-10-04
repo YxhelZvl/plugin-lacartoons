@@ -9,14 +9,18 @@
   "icon": "icon.png",
   "homepage": "https://www.lacartoons.com/",
   "hosts": [
-  "*.lacartoons.com",
-  "*.ok.ru",
-  "ok.ru",
-  "*.okcdn.ru",
-  "*.mycdn.me",
-  "*.rpmvid.com",
-  "*.tiktokcdn.com"
-],
+    "*.lacartoons.com",
+    "*.ok.ru",
+    "ok.ru",
+    "*.okcdn.ru",
+    "*.mycdn.me",
+    "*.rpmvid.com",
+    "*.tiktokcdn.com",
+    "dhtpre.com",
+    "*.dhtpre.com",
+    "sendvid.com",
+    "*.sendvid.com"
+  ],
   "streamHosts": "any",
   "capabilities": [
     "search",
