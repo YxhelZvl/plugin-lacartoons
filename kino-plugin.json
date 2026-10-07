@@ -1,25 +1,25 @@
 {
   "id": "lacartoons-source",
   "name": "LACartoons",
-  "version": "1.0.1",
-  "apiVersion": 4,
+  "version": "1.1.0",
+  "apiVersion": 6,
   "entry": "plugin.js",
-  "description": "Series animadas de LACartoons con episodios y reproducción desde sus videos públicos.",
+  "description": "Series animadas clásicas en español latino: búscalas, explóralas por canal y reproduce sus episodios.",
   "author": "YxhelZvl",
-  "icon": "icon.png",
   "homepage": "https://www.lacartoons.com/",
+  "icon": "icon.png",
   "hosts": [
+    "www.lacartoons.com",
+    "lacartoons.com",
     "*.lacartoons.com",
-    "*.ok.ru",
     "ok.ru",
+    "*.ok.ru",
     "*.okcdn.ru",
     "*.mycdn.me",
     "*.rpmvid.com",
-    "*.tiktokcdn.com",
     "dhtpre.com",
     "*.dhtpre.com",
-    "sendvid.com",
-    "*.sendvid.com"
+    "*.tiktokcdn.com"
   ],
   "streamHosts": "any",
   "capabilities": [
@@ -30,7 +30,25 @@
     "resolve",
     "download"
   ],
+  "categories": [
+    "series"
+  ],
+  "section": {
+    "label": "LACartoons"
+  },
+  "telemetry": true,
+  "theme": {
+    "accent": "#6EA8FE",
+    "onAccent": "#0A1220",
+    "background": "#10141C",
+    "surface": "#1B2230",
+    "highlight": "#A9CBFD"
+  },
   "secrets": {
-    "cubeKey": "kino-sealed:v1:6urtAz0VNJhg--IO9I-DopbJL3FkGchO5BwDIInwWzi-0MuylJHNP9wKFgF-sRvRj7vpPWWH33m3bO-71Xe8zQNU_-Lvr0fgSAxTzw"
+    "cubeKey": "kino-sealed:v1:e64j4db1yR7WcYOZqFMSJE5rf-p6br7byOOUFB1SSWXCh4l4BOJMiZMVdsvRsgynyX-U2tcG0v4SomG2OGI-oD64iB4Es6qQuvka1g"
+  },
+  "signature": {
+    "authorKey": "c8293e9940736e78506273ed41508bd39e93b7fb9434051e30f9767354dd3018",
+    "value": "07e043491982934fde42fffa68164af389b07802132df93c1e435008eb7c24b5a2941275bd8ce16a048f15d143eecdf0cf245367142705ad102b1988846e2900"
   }
 }
